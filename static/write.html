@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Shark says</title>
+<style>
+
+body {
+  font-family:sans;
+}
+
+img {
+  float:left;
+  max-width:100%;
+  height:auto;
+}
+
+form {
+  display: block;
+  padding-top: 50px;
+}
+
+textarea {
+  display:block;
+  width:600px;
+  max-width:100%;
+}
+
+input {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #75b348;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: large;
+  color:white;
+  cursor: pointer;
+}
+
+input:hover {
+  background-color: #ADE282;
+}
+</style>
+
+</head>
+<body>
+<img src='/static/businessoptics-mascot.png'>
+<form action='/say' target='_blank'>
+  <textarea rows=10 name='message' placeholder='Shark says...'></textarea>
+  <input type='submit' value='Say'></input>
+</form>
+</body>
+</html>
