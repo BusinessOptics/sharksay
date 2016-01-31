@@ -4,7 +4,8 @@ from sharksay import sharksay
 from StringIO import StringIO
 from subprocess import check_output
 
-
+PORT = name = os.environ.get('PORT', 8080)
+HOSTNAME = name = os.environ.get('HOSTNAME', 'localhost')
 STATIC_ROOT = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     'static'
@@ -23,11 +24,11 @@ def write():
 def say():
     message = request.query.message
     if not message:
-        message = check_output('fortune')
+        message = check_output('/usr/games/fortune')
     image = sharksay(message)
     response.content_type='image/png'
     buf = StringIO()
     image.save(buf, 'png')
     return buf.getvalue()
 
-run(host='localhost', port=8080)
+run(host=HOSTNAME, port=PORT)

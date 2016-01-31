@@ -15,7 +15,7 @@ def sharksay(message):
 
     image = Image.new("RGBA", (20*30+270,max(256,70+25*len(lines))), (255,255,255))
     image.paste(shark, (0,0))
-    usr_font = ImageFont.truetype("resources/DejaVuSans.ttf", 20)
+    usr_font = ImageFont.truetype("/usr/share/fonts/truetype/FreeSans.ttf", 20)
     d_usr = ImageDraw.Draw(image)
 
     text_size = d_usr.textsize(message, usr_font)
