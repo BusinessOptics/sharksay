@@ -31,4 +31,4 @@ def say():
     image.save(buf, 'png')
     return buf.getvalue()
 
-run(host=HOSTNAME, port=PORT)
+run(server='paste', host=HOSTNAME, port=PORT)
